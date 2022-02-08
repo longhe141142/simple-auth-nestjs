@@ -197,7 +197,7 @@
     + DB_PASSWORD
     + DB_TYPE
     + DB_PORT
-- Check db synchronize in  [here](https://github.com/user/repo/blob/branch/other_file.md)
+- Check db synchronize in  [here](https://github.com/longhe141142/simple-auth-nestjs/blob/main/src/common/config/db.config.ts)
 
 
 # OPERATION:
@@ -207,4 +207,4 @@
 
 # Postman
 - Import POSTMAN from directory in src folder
-  [here](https://github.com/user/repo/blob/branch/other_file.md)
+  [here](https://github.com/longhe141142/simple-auth-nestjs/blob/main/UNO.postman_collection.json)
