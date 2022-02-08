@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "bd147afc-b444-4a3c-8a01-efee39f965bd",
+		"name": "UNO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"longnt1\",\n    \"password\":\"test123\",\n    \"email\":\"longnt1@gmafdsil.com\",\n    \"socialInsurance\":\"125454\",\n    \"address\":\"Ha Noi\",\n    \"employee\":{\n        \"firstName\":\"Nguyen\",\n        \"lastName\":\"Long\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

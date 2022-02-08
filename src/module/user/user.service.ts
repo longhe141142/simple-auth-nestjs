@@ -5,7 +5,7 @@ import {
     Injectable,
 } from '@nestjs/common';
 import {InjectRepository} from '@nestjs/typeorm';
-import {UserRepository} from './user.repostories';
+import {UserRepository} from "./user.repository";
 import {Connection, EntityManager} from 'typeorm';
 import {
     ErrorHandle, ResponseSuccess, ResponseError, ResponseReport
@@ -17,6 +17,7 @@ import {CodeName, ErrorMessage} from "../../common/constant";
 import {WINSTON_MODULE_PROVIDER} from 'nest-winston';
 import {Logger} from 'winston';
 import {UserDto} from '../../common/dto/user.dto';
+import {CreateUserDto} from "../auth/dto/register.dto";
 
 @Injectable()
 export class UserService extends BaseService<User> {
@@ -29,7 +30,7 @@ export class UserService extends BaseService<User> {
         super(userRepository);
     }
 
-    createUser(user: Partial<UserDto>): User {
+    createUser(user: Partial<CreateUserDto>): User {
         const userInstance = new User({
             ...user,
             createdBy: user.userName,
